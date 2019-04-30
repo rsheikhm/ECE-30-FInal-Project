@@ -1,4 +1,5 @@
-# ECE-30-FInal-Project
+Introduction to Computer Engineering Programming Project {Most Negative Subarray Sum}
+
 The goal of this project is to implement the most negative sum subarray problem in MIPS. The most negative subarray sum takes as input an array of integers and produces as output the most negative sum of any contiguous subarray in the original array. 
 
 For example: The input can be the array {2, 5, -6, 2, 3, -1, -5, 6}. An example of a subarray is {5,-6,2} but {2,3,-5} is not a subarray. We seek to find the most negative sum of elements in any subarray of the given array. In this example, the highlighted subarray has the most negative sum, which is -7. (You can verify this for yourself by trying other subarrays; this value will be the most negative possible). 
