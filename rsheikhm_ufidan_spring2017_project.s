@@ -1,8 +1,8 @@
 # Project ECE 30 Spring 2017
 # MaxNeg Subarray Sum
-# Student 1 : PID A12854288
+# Student 1 : 
 # Sheikh Mohamed, Reem
-# Student 2 : PID A14029254
+# Student 2 :
 # Fidan, Umut
  
 .data ## Data declaration section
@@ -114,7 +114,7 @@ loopequal:
 lw $a0, 4($sp)		#arr[]
 lw $a1, 8($sp)		#s
 lw $a2, 12($sp)	#e
-sll $a1,$a1,2		#multiplying the index by four since the next element’s address is a 4 bit #far away
+sll $a1,$a1,2		#multiplying the index by four since the next elementâ€™s address is a 4 bit #far away
 add $a0,$a0,$a1	# the complete address of arr[s]
 lw $v0, 0($a0)	 	#the result=arr[s]
 sub $a0, $a0, $a1
@@ -144,7 +144,7 @@ sw $a0, 4($sp)    	# storing the original arr[]
 sw $a1, 8($sp)	# storing the original s value 
 sw $a2, 12($sp)	# storing the original m value 
 sw $a3, 16($sp)	# storing the original e value 
-li $a3, 0 		#change the direction to 0, we don’t have to change anything else
+li $a3, 0 		#change the direction to 0, we donâ€™t have to change anything else
 
 jal MaxNegSumBoundary #call MaxNegSumBoundary left subarray a[s,m] with direction 0.
 sw $v0, 20($sp)	#storing the first result into 20($sp)
@@ -155,7 +155,7 @@ li $a3, 1		#change the direction to 1
 jal MaxNegSumBoundary	#call MaxNegSumBoundary right subarray a[m+1,e] with direction 1
 li $t0,0
 lw $t0, 20($sp)
-add $v0,$t0,$v0	#returning the sum of the results of the previous MaxNegSumBoundary’s
+add $v0,$t0,$v0	#returning the sum of the results of the previous MaxNegSumBoundaryâ€™s
 lw $ra, 0($sp)		#getting the return address back
 addi $sp,$sp, 28	#closing the stack
 jr $ra
@@ -179,7 +179,7 @@ srl $a3,$a3,1           	#I store m value into the $a3 register, shifting right 
 sw $a3, 16($sp)      	#store m into stack
 move $a2,$a3         	#$a2=$a3
 
-jal MaxNegSubArraySum  #compute the maximum subarray sum of the left subarray arr[s…m].
+jal MaxNegSubArraySum  #compute the maximum subarray sum of the left subarray arr[sâ€¦m].
 sw $v0, 20($sp)      	#first result into 20($sp)
 lw $a3, 16($sp)	#retrieve the original m
 addi $a3, $a3, 1      	#m=m+1
@@ -214,7 +214,7 @@ jr $ra
  
 equal:
 lw $a1, 8($sp)		#retrieving s value from the stack 
-sll $a1, $a1, 2      	 #multiplying s by 4 since we are trying to access n+1’th element
+sll $a1, $a1, 2      	 #multiplying s by 4 since we are trying to access n+1â€™th element
 add $a0,$a1,$a0  	#I am adding the base address to the index*4
 lw $v0, 0($a0)	    	#Accessing the arr[s] value
 sub $a0,$a0,$a1  	#retrieving the original address
